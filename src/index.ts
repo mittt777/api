@@ -15,10 +15,8 @@ app.get("/", (c) => {
 
 app.get("/api/ss", async (c) => {
   const res = await supabase
-    .from("employees")
-    .select()
-    .eq("name", "mmmm")
-    .single();
+  .from('employees')
+  .select('*')
 
 
   return c.json(res);
