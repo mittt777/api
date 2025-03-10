@@ -12,6 +12,19 @@ app.get("/", (c) => {
   return c.text("Hello Hono!");
 });
 
+app.get("/api/helloo", (c) => {
+
+	const user = await supabaseClient
+		.from('employees')
+		.select()
+		.eq('name', 'mmmm')
+		.single();
+//	console.log(user);
+  
+  return c.json(user);
+});
+
+
 app.get('/sse', async (c) => {
   let id = 0;
   return streamSSE(c, async (stream) => {
