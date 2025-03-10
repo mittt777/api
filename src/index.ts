@@ -12,6 +12,17 @@ app.get("/", (c) => {
   return c.text("Hello Hono!");
 });
 
+
+app.get("/api/ss", async (c) => {
+  const res = await supabase
+    .from("employees")
+    .select()
+    .eq("name", "mmmm")
+    .single();
+
+
+  return c.json(res);
+});
 app.get("/api/helloo", (c) => {
 
 	const user = await supabaseClient
