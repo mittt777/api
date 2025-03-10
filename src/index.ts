@@ -23,17 +23,7 @@ app.get("/api/ss", async (c) => {
 
   return c.json(res);
 });
-app.get("/api/helloo", (c) => {
 
-	const user = await supabaseClient
-		.from('employees')
-		.select()
-		.eq('name', 'mmmm')
-		.single();
-//	console.log(user);
-  
-  return c.json(user);
-});
 
 
 app.get('/sse', async (c) => {
