@@ -1,9 +1,9 @@
 import { Hono } from "hono";
 import { createClient } from "@supabase/supabase-js";
 import {streamSSE } from 'hono/streaming';
-const supabaseUrl = "https://bacqiesjoqdkxvluwdel.supabase.co";
+const supabaseUrl = "https://nfzomzhmgexrwhdgpexo.supabase.co";
 const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJhY3FpZXNqb3Fka3h2bHV3ZGVsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjI0Njc1MzcsImV4cCI6MjAzODA0MzUzN30.Ysb8cmpJKKnQv_W6g4MvYUaLxrUvGCZTqmBwsBzjoLw";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5mem9temhtZ2V4cndoZGdwZXhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAzMDYwMDQsImV4cCI6MjA1NTg4MjAwNH0.POTxAQp3ocaN5Abd2z1oWTIxal0yJCJcKL5Td3iGOEM";
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const app = new Hono();
